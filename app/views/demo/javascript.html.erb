@@ -1,0 +1,19 @@
+<!--
+<%=link_to("Roar", "#", :onclick => "jsRoar(); return true;") %>
+<% text = "'); alert('Gotcha!" %>
+<%= javascript_tag("alert('#{escape_javascript(text)}');") %>
+-->
+
+<%=link_to("Give Div Html", "#", :onclick => "work_with_dom(); return true;") %>
+<h1 id="mainTitle">Learning JavaScript</h1>
+<p>JavaScript is:</p>
+<ul id="optionList">
+	<li>a language that runs in browser</li>
+	<li>simple, but powerful</li>
+	<li>misunderstood</li>
+</ul>
+<div id="someContent">
+	<p>Some sample of the content</p>
+</div>
+
+<p><%= @dummy.return_test(true) %></p>

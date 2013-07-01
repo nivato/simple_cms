@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  		<title>Simple CMS<%= " | #{@page_title}" if @page_title %></title>
+  		<meta name="author" content="Nazar Ivato" />
+  		<%= csrf_meta_tag %>
+  		<%= stylesheet_link_tag("public") %>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Simple CMS</h1>
+		</div>
+		<div id="main">
+			<div id="navigation">
+				<%= render(:partial => "layouts/navigation", :locals => {:subjects => @subjects}) %>
+			</div>
+			<div id="content">
+				<%= yield %>
+			</div>
+			<div id="clear"></div>
+		</div>
+		<div id="footer">
+			<p id="copyright">&copy; <%= link_to("vk.com/nazar_ivato", "http://vk.com/nazar_ivato") %> / Nazar Ivato</p>
+		</div>
+	</body>
+</html>
